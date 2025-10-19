@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eustaq Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Welcome screen -->
+  <main class="welcome" aria-labelledby="welcome-title">
+    <div class="welcome__bg" role="img" aria-label="Sala de estar"></div>
+    <div class="welcome__overlay"></div>
+
+    <div class="welcome__center">
+      <h1 id="welcome-title" class="welcome__title">Eustaq Home</h1>
+      <a href="#home" class="welcome__button">Continuar</a>
+    </div>
+
+    <footer class="welcome__footer">
+      <p>© 2025 Eustaq. Todos los derechos reservados.</p>
+    </footer>
+  </main>
+
+  <!-- Home screen -->
+  <main id="home-screen" class="app" hidden aria-labelledby="app-title">
+    <header class="app__header">
+      <div>
+        <h1 id="app-title" class="app__title">Hola! Usuario</h1>
+        <p id="app-date" class="app__date">—</p>
+      </div>
+      <button class="icon-btn" aria-label="Notificaciones">🔔</button>
+    </header>
+
+    <section class="app__section">
+      <h2 class="app__section-title">Control de Acceso</h2>
+      <div class="segmented" role="tablist" aria-label="Control de Acceso">
+        <button class="segmented__btn is-active" role="tab" aria-selected="true">🔒 Cerrar puerta</button>
+        <button class="segmented__btn" role="tab" aria-selected="false">Abrir puerta</button>
+      </div>
+    </section>
+
+    <div class="tabs" role="tablist" aria-label="Categorías">
+      <button class="tab is-active" role="tab" aria-selected="true">Iluminación</button>
+      <button class="tab" role="tab" aria-selected="false">Temperatura</button>
+    </div>
+
+    <section class="cards" aria-label="Estancias">
+      <article class="card">
+        <button class="card__toggle" aria-pressed="true" title="Interruptor"></button>
+        <div class="card__icon">🛣</div>
+        <h3 class="card__title">Pasadizo</h3>
+        <small class="card__status">On</small>
+      </article>
+
+      <article class="card">
+        <button class="card__toggle" aria-pressed="false" title="Interruptor"></button>
+        <div class="card__icon">🛋</div>
+        <h3 class="card__title">Sala</h3>
+        <small class="card__status">Off</small>
+      </article>
+
+      <article class="card">
+        <button class="card__toggle" aria-pressed="true" title="Interruptor"></button>
+        <div class="card__icon">🍳</div>
+        <h3 class="card__title">Cocina</h3>
+        <small class="card__status">On</small>
+      </article>
+
+      <article class="card">
+        <button class="card__toggle" aria-pressed="true" title="Interruptor"></button>
+        <div class="card__icon">👩‍🍳</div>
+        <h3 class="card__title">Comedor</h3>
+        <small class="card__status">On</small>
+      </article>
+
+      <article class="card">
+        <button class="card__toggle" aria-pressed="false" title="Interruptor"></button>
+        <div class="card__icon">🛁</div>
+        <h3 class="card__title">Baño</h3>
+        <small class="card__status">Off</small>
+      </article>
+
+      <article class="card">
+        <button class="card__toggle" aria-pressed="false" title="Interruptor"></button>
+        <div class="card__icon">🛏</div>
+        <h3 class="card__title">Habitación</h3>
+        <small class="card__status">Off</small>
+      </article>
+
+      <article class="card card--wide">
+        <button class="card__toggle" aria-pressed="true" title="Interruptor"></button>
+        <div class="card__icon">🚗</div>
+        <h3 class="card__title">Cochera</h3>
+        <small class="card__status">On</small>
+      </article>
+    </section>
+
+    <nav class="app__nav" aria-label="Navegación inferior">
+      <button class="nav__btn" aria-label="Inicio">🏠</button>
+      <button class="nav__mic" aria-label="Asistente">🎤</button>
+      <button class="nav__btn" aria-label="Perfil">👤</button>
+    </nav>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
