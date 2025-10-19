@@ -119,6 +119,59 @@
     </nav>
   </main>
 
+  <!-- Voice assistant screen (oculto por defecto) -->
+  <main id="voice-screen" class="voice" hidden aria-labelledby="voice-title">
+    <header class="voice__header">
+      <button class="icon-btn voice__back" aria-label="Volver">←</button>
+      <div class="voice__label">Control por Voz Inteligente</div>
+      <button class="btn voice__commands" aria-label="Ver comandos">Ver comandos</button>
+    </header>
+
+    <section class="voice__content" role="region" aria-live="polite">
+      <p class="voice__hint">El asistente siempre está escuchando los comandos de voz</p>
+
+      <div class="voice__wave" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+      </div>
+
+      <h2 class="voice__command" id="voice-title">Presiona el micrófono</h2>
+
+      <div class="voice__theremin">
+        <button id="voice-mic" class="voice__mic" aria-pressed="false" aria-label="Iniciar captura de voz">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19 11v1a7 7 0 0 1-14 0v-1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 19v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Panel "Ver comandos" -->
+    <div id="voice-commands-panel" class="voice__commands-panel" role="dialog" aria-modal="true" aria-labelledby="commands-title" hidden>
+      <div class="voice__commands-inner" role="document">
+        <header class="voice__commands-header">
+          <h3 id="commands-title">Comandos soportados</h3>
+          <button id="commands-close" class="icon-btn" aria-label="Cerrar comandos">✕</button>
+        </header>
+        <ul class="voice__commands-list">
+          <li>Abrir puerta / Cerrar puerta</li>
+          <li>Encender sala / Apagar sala</li>
+          <li>Encender baño / Apagar baño</li>
+          <li>Encender habitación / Apagar habitación</li>
+          <li>Encender cochera / Apagar cochera</li>
+          <li>Ver temperatura / ¿Qué temperatura hace?</li>
+          <li>Encender televisor / Apagar televisor</li>
+          <li>Apagar todas las luces</li>
+          <li>Encender cocina / Apagar cocina</li>
+          <li>Encender computadora / Apagar computadora</li>
+        </ul>
+      </div>
+      <div class="voice__commands-backdrop" data-close></div>
+    </div>
+  </main>
+
   <script src="script.js"></script>
 </body>
 </html>
