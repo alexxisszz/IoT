@@ -198,6 +198,46 @@ body{
   cursor: pointer;
 }
 
+/* Panel de temperatura */
+.temperature{
+  display: grid;
+  justify-items: center;
+  padding-top: 18px;
+  gap: 18px;
+  color: var(--text);
+}
+.temperature__inner{ width:100%; max-width:420px; text-align:center; margin: 20px auto; }
+
+.thermostat{
+  display:flex; align-items:center; justify-content:center;
+  width: 320px; height: 320px; margin: 0 auto;
+}
+.thermostat__ring{
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(255,255,255,0.02), transparent 60%);
+  box-shadow: inset 0 -18px 40px rgba(0,0,0,0.6), 0 8px 30px rgba(0,0,0,0.5);
+  display:flex; align-items:center; justify-content:center;
+}
+.thermostat__face{
+  width: 78%; height: 78%; border-radius:50%;
+  background: linear-gradient(#201c1a, #141210);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+}
+.temp-value{ font-size: 72px; font-weight: 700; line-height:1; color:#e8e0d6; }
+.temp-unit{ font-size:28px; margin-left:6px; color:#e8e0d6; }
+.temp-label{ margin-top:8px; color:var(--text-dim); font-size:14px; }
+
+/* Hint + brand */
+.temperature__hint{ margin-top: 12px; color:var(--text-dim); font-size:14px; }
+.temperature__brand{ margin-top:4px; color:rgba(255,255,255,0.06); font-weight:700; }
+
+/* Asegurar responsivo */
+@media (max-width:420px){
+  .thermostat{ width: 260px; height:260px; }
+  .temp-value{ font-size:54px; }
+}
+
 /* Pequeñas pantallas */
 @media (max-width: 380px){
   .card{ min-height:110px; }

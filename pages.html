@@ -45,6 +45,22 @@
       <button class="tab" role="tab" aria-selected="false">Temperatura</button>
     </div>
 
+    <!-- Panel de temperatura (oculto por defecto) -->
+    <section id="temperature-panel" class="temperature" hidden aria-label="Temperatura">
+      <div class="temperature__inner">
+        <div class="thermostat" role="img" aria-label="Termostato">
+          <div class="thermostat__ring">
+            <div class="thermostat__face">
+              <div class="temp-value">15<span class="temp-unit">°C</span></div>
+              <div class="temp-label">Frío</div>
+            </div>
+          </div>
+        </div>
+        <p class="temperature__hint"><strong>Temperatura</strong> interior confortable.</p>
+        <p class="temperature__brand">Eustaq Home</p>
+      </div>
+    </section>
+
     <section class="cards" aria-label="Estancias">
       <article class="card">
         <button class="card__toggle" aria-pressed="true" title="Interruptor"></button>
